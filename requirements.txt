@@ -1,0 +1,9 @@
+engarde
+notebook
+ipython
+jupyter
+numpy
+pandas
+seaborn
+matplotlib
+q
