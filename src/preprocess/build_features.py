@@ -7,6 +7,18 @@ def remove_invalid_data(path):
         invalid columns and returns the dataframe.
     """
     df = pd.read_csv(path, index_col=0)
+
+    invalid_values = {
+        'amount_tsh': {0: np.nan},
+        'longitude': {0: np.nan},
+        'installer': {0: np.nan},
+        'construction_year': {0: np.nan},
+    }
+
+    # drop rows with invalid values
+    df.replace(invalid_values, inplace=True)
+    df.dropna(how="any", inplace=True)
+
     return df
 
 
