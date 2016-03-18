@@ -15,4 +15,4 @@ ENV USER main
 WORKDIR $HOME
 
 # install requirements.txt
-RUN pip install -r repo/requirements.txt
+RUN pip install -r /home/andrew/binder/apps/pjbull-data-science-is-software/build/app/repo/requirements.txt
