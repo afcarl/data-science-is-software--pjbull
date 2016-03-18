@@ -15,4 +15,4 @@ ENV USER main
 WORKDIR $HOME
 
 # install requirements.txt
-RUN pip install -r /home/main/repo/requirements.txt
+RUN pip install -r /home/main/notebooks/requirements.txt
