@@ -1,5 +1,5 @@
 # Data Science is Software: Developer #lifehacks for the Jupyter Data Scientist
 
 ## Requirements
- - Python 2.7
+ - Python (if you don't have Python, you can follow [these directions](bit.ly/machine-setup) to install it with Anaconda).
  - `pip install -r requirements.txt`

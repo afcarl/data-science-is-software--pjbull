@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import numpy as np
 
 # this makes matplotlib be called
@@ -62,7 +64,7 @@ def gelman_rubin(samples):
     # calculate potential scale reduction factor
     R = np.sqrt(var/var_wc)
 
-    print "The Gelman-Rubin potential scale reduction factor is: ", R, " (< 1.1 indicates good mixing)"
+    print("The Gelman-Rubin potential scale reduction factor is: ", R, " (< 1.1 indicates good mixing)")
 
 def Geweke(trace, intervals=1, length=200, first=0.1):
     first*=len(trace)
@@ -86,7 +88,7 @@ def Geweke(trace, intervals=1, length=200, first=0.1):
 
         z[k] = (theta_a-theta_b)/np.sqrt( var_a + var_b)
 
-    print "The Geweke Diagnostic Value is: ", np.abs(z), "(< 1.96 indicates convergence)"
+    print("The Geweke Diagnostic Value is: ", np.abs(z), "(< 1.96 indicates convergence)")
 
 
 def plot_diagnostics(samples):
@@ -167,7 +169,7 @@ def hamiltonian(sample_size, U, K, grad_U, dims=2, L=5, epsilon=0.1, burn_in=10,
         p = p - epsilon * grad_U(q)/2.0
 
         # alternate full steps for position and momentum
-        for i in xrange(L):
+        for i in range(L):
             q = q + epsilon*p
 
             if (i != L-1):
